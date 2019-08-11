@@ -9,7 +9,7 @@ An app geared towards sneaker collectors or anyone who likes and wants to catalo
 
 **Expected Challenges**
 &nbsp;
-* Authorization and authentification part of this application would be the most challenging. 
+* Authorization and authentication part of this application would be the most challenging. 
 
 * Creating the CRUD functionality and the specific routes associated with the various parts of the project.
 
