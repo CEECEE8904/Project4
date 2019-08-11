@@ -77,17 +77,17 @@ Once form is completed user submits and it gets added to their collection.
 **Supported Libraries**
 
 * Server-Side
-    *Rails
+      *Rails
 
 
 * Authentication
-    *bcrypt
-    *jsonwebtoken
+      *bcrypt
+      *jsonwebtoken
 
 * Client-Side
-    *axios
-    *react
-    *react-router-dom
+      *axios
+      *react
+      *react-router-dom
     
 
 
