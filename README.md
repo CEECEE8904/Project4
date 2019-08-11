@@ -18,8 +18,16 @@ Expected Challenges
 
 
 MVP
-* Bullet list
-testing 
-testing 
-tsting
+* User can create an account.
+* User is able to login and logout.
+* User has a collections page.
+* User is able to save specific sneaker to their collections page.
+* User is able to add a new sneaker to their collections page.
+* User is able to add a like to the "must have" sections of (home page).
+
+Post MVP
+
+
+
+
 
