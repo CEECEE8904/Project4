@@ -7,7 +7,9 @@
 An app geared towards sneaker collectors or anyone who likes and wants to catalogue the different sneakers they own. Users has to make an account before they can use the services, but once they do they are able to do a number of things. Once logged in they are able to create a collection list of all the sneakers they own, their pricing, description, picture and a little review of it. Home menu will have the top must have's for that specific season and year. User can interact with giving it a like and adding it to their list if they own it.
 &nbsp;
 &nbsp;
+
 **Expected Challenges**
+
 &nbsp;
 * Authorization and authentication part of this application would be the most challenging. 
 
@@ -17,6 +19,7 @@ An app geared towards sneaker collectors or anyone who likes and wants to catalo
 &nbsp;
 &nbsp;
 &nbsp;
+
 **MVP**
 * User can create an account.
 * User is able to login and logout.
@@ -27,10 +30,11 @@ An app geared towards sneaker collectors or anyone who likes and wants to catalo
 
 **Post MVP**
 * TBD
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+
+
+
+
+
 
 ### Features-List ###
 
