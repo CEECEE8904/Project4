@@ -85,6 +85,20 @@ Once form is completed user submits and it gets added to their collection.
 &nbsp;
 &nbsp;
 
+### Entity Relationship Diagram (ERD) ###
+![picture alt](https://i.ibb.co/brPbwj9/erd.png)<br /><br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
 ### Wireframes ###
 
 
