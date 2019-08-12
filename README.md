@@ -88,22 +88,22 @@ Once form is completed user submits and it gets added to their collection.
 
 
 **Login View**
-<img src= "/img/login.png" alt="login_view"><br /><br /><br />
+![picture alt](https://i.ibb.co/1dHRccG/login.png)<br /><br /><br />
 
 **Register View**
-<img src= "/img/register.png" alt="login_view"><br /><br /><br />
+![picture alt](https://i.ibb.co/pLdkNV2/register.png)<br /><br /><br />
 
 **Home**
-<img src= "/img/index.png" alt="login_view"><br /><br /><br />
+![picture alt](https://i.ibb.co/RgQg4yh/index.png)<br /><br /><br />
 
 **View Collection**
-<img src= "/img/view_collection.png" alt="login_view"><br /><br /><br />
+![picture alt](https://i.ibb.co/zX72Vgz/view-collection.png)<br /><br /><br />
 
 **Add Sneaker**
-<img src= "/img/add_sneaker.png" alt="login_view"><br /><br /><br />
+![picture alt](https://i.ibb.co/c2N3f09/add-sneaker.png)<br /><br /><br />
 
 **Sneaker View**
-<img src= "/img/sneaker_view.png" alt="login_view"><br /><br /><br />
+![picture alt](https://i.ibb.co/DL9nssQ/sneaker-view.png)<br /><br /><br />
 
 **Component Timeframe**
 
