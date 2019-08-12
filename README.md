@@ -112,8 +112,9 @@ Component     | Priority      | Estimated Time  |  Actual Time  |
 Sign In Form  | High          |  3 1/2 Hours    | TBD           |
 Sign Up Form  | High          |  TBD            | TBD           |
 Log Out       | High          |  TBD            | TBD           |
-Register Form | High          |  TBD            | TBD           |
+Register Form | High          |  TBD            | TBD           |<br /><br />
 
+![picture alt](https://media3.giphy.com/media/smGtEdVjeQysg/source.gif)
 
     
 
