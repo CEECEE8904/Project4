@@ -88,10 +88,7 @@ Once form is completed user submits and it gets added to their collection.
 
 
 **Login View**
-<img src= "/img/login.png" alt="login_view">
-<br />
-<br />
-<br />
+<img src= "/img/login.png" alt="login_view"><br /><br /><br />
 **Register View**
 <img src= "/img/register.png" alt="login_view">
 <br />
@@ -114,13 +111,15 @@ Once form is completed user submits and it gets added to their collection.
 <br />
 **Sneaker View**
 <img src= "/img/sneaker_view.png" alt="login_view">
-
-
-
-
-
-
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 **Component Timeframe**
 
 Component     | Priority      | Estimated Time  |  Actual Time  |
