@@ -15,13 +15,10 @@ An app geared towards sneaker collectors or anyone who likes and wants to catalo
 
 * Connecting the Rails back-end with the React front-end.
 
-
-
-
-
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 **MVP**
 * User can create an account.
@@ -34,11 +31,10 @@ An app geared towards sneaker collectors or anyone who likes and wants to catalo
 **Post MVP**
 * TBD
 
-
-
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ### Features-List ###
 
@@ -64,15 +60,9 @@ When adding user will be prompt with a form that will ask for name, brand, price
 
 Once form is completed user submits and it gets added to their collection.
 
-
-
-
-
-
-
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 **Supported Libraries**
 
@@ -88,6 +78,22 @@ Once form is completed user submits and it gets added to their collection.
   - axios
   - react
   - react-router-dom
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+**Component Time-Frame**
+
+Component     | Priority      | Estimated Time  |  Actual Time  |
+------------- | ------------- |---------------  |-------------  |
+Sign In Form  | High          |  3 1/2 Hours    | TBD           |
+Sign Up Form  | High          |  TBD            | TBD           |
+Log Out       | High          |  TBD            | TBD           |
+Register Form | High          |  TBD            | TBD           |
+
 
     
 
