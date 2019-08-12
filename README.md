@@ -34,7 +34,6 @@ An app geared towards sneaker collectors or anyone who likes and wants to catalo
 
 
 
-
 ### Features-List ###
 
 Application that displays a collection of the users favorite sneakers.
@@ -84,7 +83,14 @@ Once form is completed user submits and it gets added to their collection.
 &nbsp;
 &nbsp;
 
-**Component Time-Frame**
+### Wireframes ###
+
+
+
+**Login View**
+<img src= "/img/login.png" alt="login_view">
+
+**Component Timeframe**
 
 Component     | Priority      | Estimated Time  |  Actual Time  |
 ------------- | ------------- |---------------  |-------------  |
