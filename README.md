@@ -1,6 +1,6 @@
 # Project4: SNKR HEDZ 
 
-![picture alt](https://flypapermagazine.com/wp-content/uploads/Sneakerheads.jpg)
+![picture alt](https://i.ibb.co/HhLVBWL/banner.png)
 
 ### Project Description ###
 
