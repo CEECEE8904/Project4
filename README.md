@@ -4,7 +4,9 @@
 
 ### Project Description ###
 
-An app geared towards sneaker collectors or anyone who likes and wants to catalogue the different sneakers they own. Users has to make an account before they can use the services, but once they do they are able to do a number of things. Once logged in they are able to create a collection list of all the sneakers they own, their pricing, description, picture and a little review of it. Home menu will have the top must have's for that specific season and year. User can interact with giving it a like and adding it to their list if they own it.
+An app geared towards sneaker collectors or anyone who likes and wants to catalogue the different sneakers they own. Users has to make an account before they can use the services, but once they do they are able to do a number of things. Once logged in they are able to create a collection list of all the sneakers they own, their pricing, description, picture and a little review of it. Home menu will have the top must have's for that specific season and year. User can interact with giving it a like and adding it to their list if they own it.<br />
+![picture alt](https://media3.giphy.com/media/smGtEdVjeQysg/source.gif)<br />
+
 
 
 **Expected Challenges**
@@ -114,7 +116,6 @@ Sign Up Form  | High          |  TBD            | TBD           |
 Log Out       | High          |  TBD            | TBD           |
 Register Form | High          |  TBD            | TBD           |<br /><br />
 
-![picture alt](https://media3.giphy.com/media/smGtEdVjeQysg/source.gif)
 
     
 
