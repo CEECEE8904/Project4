@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom'
 import { Link, Route } from 'react-router-dom';
+import Collect from './Collect';
 
 
 class Navbar extends React.Component {
@@ -32,11 +33,12 @@ class Navbar extends React.Component {
       <nav>
         <ul className="nav_links">
           <li><Link to="/home">Home</Link></li>
-          <li>My Collection</li>
+          <li><Link to="/collect">My Collection</Link></li>
           <li>Add</li>
         </ul>
         <button onClick={this.handleLogout}>Logout</button>
         <main>
+          <Route path="/collect" render={() => <Collect />} />
           {/* <Route path="/home" render={() => <Home />} /> */}
         </main>
       </nav>

@@ -45,6 +45,19 @@ html {
 
 
 /* NAV BAR */
-ul{
+.nav_links li{
   list-style: none;
+  display:inline-block;
+  padding: 0px 85px;
+  text-align: center;
+  text-decoration: none;
+}
+
+li:visited{
+  text-decoration: none;
+}
+
+a
+{
+   text-decoration:none;
 }
