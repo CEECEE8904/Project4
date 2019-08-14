@@ -5,7 +5,7 @@ const baseUrl = 'http://localhost:3000'
 const api = axios.create({
   baseURL: baseUrl
 })
-
+// ---------------- Auth Info ---------------------
 export const loginUser = async (loginData) => {
   const resp = await api.post('/auth/login', loginData)
   localStorage.setItem('authToken', resp.data.token);
@@ -34,6 +34,18 @@ const readAllUsers = async () => {
   return resp.data
 }
 
+// ---------------- (HOME )Sneakers ---------------------
+
+const readAllSneakers = async () => {
+  const resp = await api.get('/sneakers')
+  return resp.data
+}
+
+
+
+
+
 export {
   readAllUsers,
+  readAllSneakers,
 }

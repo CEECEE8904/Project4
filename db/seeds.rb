@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-sneakr1= Sneaker.create(name: "Nike Air Mag", brand: "Nike", description: "back to the future", review: "futuristic sneakers", imgurl: "https://i2.wp.com/www.nicekicks.com/files/2016/10/ni.jpg?fit=750%2C400&ssl=1",price: "35,000" )
+sneakr1= Sneaker.create(name: "Nike Air Mag", brand: "Nike", description: "back to the future", review: "futuristic sneakers", imgurl: "https://image.goat.com/crop/750/attachments/product_template_additional_pictures/images/012/219/461/original/79985_01.jpg.jpeg?1527188417",price: "35,000" )
 sneakr2= Sneaker.create(name: "Air Jordan 1 Bred Toe", brand: "Nike", description: "Jordan's First Signature Sneaker", review: "classic silhouette", imgurl: "https://cdn.shopify.com/s/files/1/0230/0485/products/robformat_copy_copy_a954f2dd-6ae1-4283-9645-3cedb6e93d20_large.jpg?v=1519262175", price: "500",)
 
 

@@ -10,8 +10,8 @@ import Home from './components/Home'
 import {
   loginUser,
   registerUser,
-  // readAllUsers,
-  // verifyUser,
+  readAllSneakers,
+  verifyUser,
 
 } from './services/api-helper'
 
@@ -30,25 +30,25 @@ class App extends React.Component {
     };
   }
 
-  // async componentDidMount() {
-  //   this.getUsers();
-  //   const user = await verifyUser();
-  //   if (user) {
-  //     this.setState({
-  //       currentUser: user
-  //     })
-  //   }
-  // }
-
-  // getUsers = async () => {
-  //   const users = await readAllUsers();
-  //   this.setState({
-  //     users
-  //   })
-  // }
 
 
+  //-------------- Display Sneakers -------------------
+  async componentDidMount() {
+    this.getSneakers();
+    const user = await verifyUser();
+    if (user) {
+      this.setState({
+        currentUser: user
+      })
+    }
+  }
 
+  getSneakers = async () => {
+    const sneakers = await readAllSneakers();
+    this.setState({
+      sneakers
+    })
+  }
 
 
   // -------------- AUTH ------------------
@@ -119,10 +119,11 @@ class App extends React.Component {
             handleChange={this.authHandleChange}
             formData={this.state.authFormData} />)} />
         <main>
-          <Route exact path="/home" render={() => (
-            <Home
-              sneakers={this.state.sneakers}
-            />)} />
+          <Route exact path="/home"
+            render={() => (
+              <Home
+                sneakers={this.state.sneakers}
+              />)} />
         </main>
       </div>
     );
