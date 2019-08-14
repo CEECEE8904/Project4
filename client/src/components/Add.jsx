@@ -2,9 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import {
   createCollect,
-} from './services/api-helper';
+} from '../services/api-helper';
 
-class Add extends Component {
+class Add extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,54 +20,70 @@ class Add extends Component {
     }
   };
 
+  newCollect = async (e) => {
+    e.preventDefault();
+    const collect = await createCollect(this.state.collectForm);
+    this.setState(prevState => ({
+      teachers: [...prevState.collects, collect],
+      teacherForm: {
+        name: "",
+        brand: "",
+        description: "",
+        review: "",
+        imgurl: "",
+        price: "",
+      }
+    }))
+  }
+
 
   render() {
     return (
       <div className="add-form">
         <h1>Add to collection</h1>
-        <form onSubmit={props.newCollect}>
+        <form onSubmit={this.props.newCollect}>
           {/* SNEAKER NAME */}
           <p>Sneaker Name:</p>
           <input
             type="text"
             name="name"
-            value={props.collectForm.name}
-            onChange={props.handleFormChange} />
+            value={this.props.collectForm.name}
+            onChange={this.props.handleFormChange} />
           {/* SNEAKER BRAND */}
           <p>Brand:</p>
           <input
             type="text"
             name="brand"
-            value={props.collectForm.brand}
-            onChange={props.handleFormChange} />
+            value={this.props.collectForm.brand}
+            onChange={this.props.handleFormChange} />
           {/* DESCRIPTION */}
           <p>Description:</p>
           <input
             type="text"
             name="description"
-            value={props.collectForm.description}
-            onChange={props.handleFormChange} />
+            value={this.props.collectForm.description}
+            onChange={this.props.handleFormChange} />
           {/* REVIEW */}
           <p>Review</p>
           <input
             type="text"
             name="review"
-            value={props.collectForm.review}
-            onChange={props.handleFormChange} />
+            value={this.props.collectForm.review}
+            onChange={this.props.handleFormChange} />
           {/* IMG URL */}
           <p>Image URL</p>
           <input
             type="text"
             name="image url"
-            value={props.collectForm.imgurl}
-            onChange={props.handleFormChange} />
+            value={this.props.collectForm.imgurl}
+            onChange={this.props.handleFormChange} />
           {/* PRICE */}
           <p>Price</p>
           <input
             type="text"
             name="description"
-            value={props.collectForm.price}
-            onChange={props.handleFormChange} />
+            value={this.props.collectForm.price}
+            onChange={this.props.handleFormChange} />
         </form>
       </div>
     );
