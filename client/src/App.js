@@ -4,6 +4,8 @@ import { withRouter } from 'react-router';
 import decode from 'jwt-decode';
 import Login from './components/Login'
 import Register from './components/Register'
+import Home from './components/Home'
+
 
 import {
   loginUser,
@@ -60,6 +62,7 @@ class App extends React.Component {
     this.setState({
       currentUser: userData
     })
+    this.props.history.push('/home')
   }
 
   handleRegister = async (e) => {
@@ -68,11 +71,13 @@ class App extends React.Component {
     this.handleLogin();
   }
 
+
   handleLogout = () => {
     localStorage.removeItem("authToken");
     this.setState({
       currentUser: null
     })
+    this.props.history.push('/login')
   }
 
   authHandleChange = (e) => {
@@ -113,6 +118,12 @@ class App extends React.Component {
             handleRegister={this.handleRegister}
             handleChange={this.authHandleChange}
             formData={this.state.authFormData} />)} />
+        <main>
+          <Route exact path="/home" render={() => (
+            <Home
+              sneakers={this.state.sneakers}
+            />)} />
+        </main>
       </div>
     );
   }
