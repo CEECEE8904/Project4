@@ -5,6 +5,7 @@ import decode from 'jwt-decode';
 import Login from './components/Login'
 import Register from './components/Register'
 import Home from './components/Home'
+import Navbar from './components/Navbar';
 
 
 import {
@@ -92,10 +93,10 @@ class App extends React.Component {
 
 
   render() {
-    return (
-      <div className="App">
-        <header>
-          <h1>AUTH TESTING</h1>
+    let display
+    if (!this.state.currentUser) {
+      display =
+        <>
           <div>
             {this.state.currentUser
               ?
@@ -107,8 +108,31 @@ class App extends React.Component {
               <button onClick={this.handleLoginButton}>Login/Register</button>}
 
           </div>
+          <Route exact path="/login" render={() => (
+            <Login
+              handleLogin={this.handleLogin}
+              handleChange={this.authHandleChange}
+              formData={this.state.authFormData} />)} />
+          <Route exact path="/register" render={() => (
+            <Register
+              handleRegister={this.handleRegister}
+              handleChange={this.authHandleChange}
+              formData={this.state.authFormData} />)} />
+        </>
+    }
+    else {
+      display =
+        <>
+          <Navbar />
+        </>
+    }
+    return (
+      <div className="App">
+        <header>
+          <h1>AUTH TESTING</h1>
+          {display}
         </header>
-        <Route exact path="/login" render={() => (
+        {/* <Route exact path="/login" render={() => (
           <Login
             handleLogin={this.handleLogin}
             handleChange={this.authHandleChange}
@@ -117,13 +141,15 @@ class App extends React.Component {
           <Register
             handleRegister={this.handleRegister}
             handleChange={this.authHandleChange}
-            formData={this.state.authFormData} />)} />
+            formData={this.state.authFormData} />)} /> */}
         <main>
-          <Route exact path="/home"
-            render={() => (
-              <Home
-                sneakers={this.state.sneakers}
-              />)} />
+          <div className="homenav">
+            <Route exact path="/home"
+              render={() => (
+                <Home
+                  sneakers={this.state.sneakers}
+                />)} />
+          </div>
         </main>
       </div>
     );

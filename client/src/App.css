@@ -42,3 +42,9 @@ html {
     transform: rotate(360deg);
   }
 }
+
+
+/* NAV BAR */
+ul{
+  list-style: none;
+}
