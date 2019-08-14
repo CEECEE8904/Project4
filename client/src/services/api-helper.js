@@ -6,6 +6,12 @@ const api = axios.create({
   baseURL: baseUrl
 })
 // ---------------- Auth Info ---------------------
+
+const getToken = () => {
+  const token = localStorage.getItem('jwt');
+  api.defaults.headers.common.authorization = `Bearer ${token}`;
+}
+
 export const loginUser = async (loginData) => {
   const resp = await api.post('/auth/login', loginData)
   localStorage.setItem('authToken', resp.data.token);
@@ -46,10 +52,30 @@ const readAllCollects = async () => {
   return resp.data
 }
 
+const createCollect = async (data) => {
+  getToken();
+  const resp = await api.post('/collects', { collect: data })
+  return resp.data
+}
+
+const updateCollect = async (id, data) => {
+  getToken();
+  const resp = await api.put(`/collects/${id}`, { collect: data })
+  return resp.data
+}
+
+const destroyCollect = async (id) => {
+  getToken();
+  const resp = await api.delete(`/collects/${id}`)
+  return resp.data
+}
 
 
 export {
   readAllUsers,
   readAllSneakers,
   readAllCollects,
+  createCollect,
+  updateCollect,
+  destroyCollect,
 }
