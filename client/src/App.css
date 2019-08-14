@@ -23,6 +23,17 @@
   color: #61dafb;
 }
 
+.auth-container {
+  margin: 8rem 36rem;
+  background: green;
+  padding: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
