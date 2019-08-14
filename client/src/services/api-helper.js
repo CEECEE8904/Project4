@@ -40,12 +40,16 @@ const readAllSneakers = async () => {
   const resp = await api.get('/sneakers')
   return resp.data
 }
-
-
+//------------------ Collection Page ---------------------
+const readAllCollects = async () => {
+  const resp = await api.get('/collects')
+  return resp.data
+}
 
 
 
 export {
   readAllUsers,
   readAllSneakers,
+  readAllCollects,
 }
