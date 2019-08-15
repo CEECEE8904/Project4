@@ -9,10 +9,14 @@ html, body {
 /* LOGIN / REGISTER PAGE */
 
 .auth-container {
-  margin: 8rem 36rem;
-  background-color: grey;
+  margin: 18rem 36rem;
+  background-color: white;
   padding: 2rem;
-  opacity: .9;
+  opacity: 1.9;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 8px;
+  border-style: ridge;
+  width: 29%;
 }
 
 .auth-container button{
@@ -27,6 +31,10 @@ opacity: 0.8;
 
 .auth-container button:visited{
   color:black;
+}
+
+.auth-container p{
+  font-size:16px;
 }
 /* /////////////////////// */
 
