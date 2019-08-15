@@ -21,6 +21,7 @@ class Add extends React.Component {
     }
   };
 
+
   newCollect = async (e) => {
     e.preventDefault();
     const collect = await createCollect(this.state.collectForm);
