@@ -18,8 +18,8 @@ class Add extends React.Component {
         imgurl: "",
         price: "",
       }
-    }
-  };
+    };
+  }
 
 
   newCollect = async (e) => {
@@ -47,7 +47,20 @@ class Add extends React.Component {
         [name]: value,
       }
     }))
-    console.log(value)
+  }
+
+  submit = (ev) => {
+    ev.preventDefault();
+    this.props.handleSubmit(this.state);
+    this.setState({
+      name: "",
+      brand: "",
+      description: "",
+      review: "",
+      imgurl: "",
+      price: "",
+    })
+    this.props.history.push('/collect')
   }
 
 

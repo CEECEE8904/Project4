@@ -14,12 +14,15 @@ const Login = (props) => {
         props.handleLogin();
       }} >
         <p>Username:</p>
-        <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
+        <input name="username" type="text" value={props.formData.username} placeholder="Enter Username" onChange={props.handleChange} />
         <p>Password:</p>
-        <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
+        <input name="password" type="password" value={props.formData.password} placeholder="Enter Password" onChange={props.handleChange} />
         <hr />
-        <button>Login</button>
-        <Link to="/register">Register</Link>
+        <div className="log-reg-button">
+          <button>Login</button>
+          &nbsp;
+          <button><Link to="/register">Register</Link></button>
+        </div>
       </form>
     </div>
   );

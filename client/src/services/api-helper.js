@@ -54,7 +54,7 @@ const readAllCollects = async () => {
 
 const createCollect = async (data) => {
   getToken();
-  const resp = await api.post(`${baseUrl}/collects`, { collect: data })
+  const resp = await api.post(`/collects`, { collect: data })
   return resp.data
 }
 

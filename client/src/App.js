@@ -97,6 +97,17 @@ class App extends React.Component {
     if (!this.state.currentUser) {
       display =
         <>
+
+          <Route exact path="/login" render={() => (
+            <Login
+              handleLogin={this.handleLogin}
+              handleChange={this.authHandleChange}
+              formData={this.state.authFormData} />)} />
+          <Route exact path="/register" render={() => (
+            <Register
+              handleRegister={this.handleRegister}
+              handleChange={this.authHandleChange}
+              formData={this.state.authFormData} />)} />
           <div>
             {this.state.currentUser
               ?
@@ -108,16 +119,6 @@ class App extends React.Component {
               <button onClick={this.handleLoginButton}>Login/Register</button>}
 
           </div>
-          <Route exact path="/login" render={() => (
-            <Login
-              handleLogin={this.handleLogin}
-              handleChange={this.authHandleChange}
-              formData={this.state.authFormData} />)} />
-          <Route exact path="/register" render={() => (
-            <Register
-              handleRegister={this.handleRegister}
-              handleChange={this.authHandleChange}
-              formData={this.state.authFormData} />)} />
         </>
     }
     else {
@@ -129,19 +130,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <h1>AUTH TESTING</h1>
           {display}
         </header>
-        {/* <Route exact path="/login" render={() => (
-          <Login
-            handleLogin={this.handleLogin}
-            handleChange={this.authHandleChange}
-            formData={this.state.authFormData} />)} />
-        <Route exact path="/register" render={() => (
-          <Register
-            handleRegister={this.handleRegister}
-            handleChange={this.authHandleChange}
-            formData={this.state.authFormData} />)} /> */}
         <main>
           <div className="homenav">
             <Route exact path="/home"
