@@ -14,9 +14,12 @@ html, body {
   padding: 2rem;
   opacity: 1.9;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  border-radius: 8px;
+  border-radius: 800px solid;
   border-style: ridge;
   width: 29%;
+  /* background-image:url('https://media.giphy.com/media/sfhIJ37lxaFFe/giphy.gif');
+background-position: center;
+background-size: cover; */
 }
 
 .auth-container button{
@@ -30,12 +33,29 @@ opacity: 0.8;
 }
 
 .auth-container button:visited{
-  color:black;
+  color:white;
 }
 
+
+.auth-container button p{
+  color:white;
+}
 .auth-container p{
   font-size:16px;
 }
+
+.auth-container img{
+  border: 10px solid red;
+  padding: 25px;
+  border-radius: 100px 0px 100px 0px;
+  height: 200px;
+}
+
+.auth-container h2{
+  font-size: 40px;
+}
+
+
 /* /////////////////////// */
 
 html {

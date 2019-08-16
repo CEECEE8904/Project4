@@ -4,6 +4,7 @@ import React from 'react';
 const Register = (props) => {
 
   return (
+
     <div className="auth-container">
       <img src={require('./images/logo_final.png')} />
       <h2>WORK YOU FKER!!!</h2>

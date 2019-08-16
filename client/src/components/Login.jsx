@@ -6,28 +6,26 @@ import { Link } from 'react-router-dom';
 const Login = (props) => {
 
   return (
-    <>
+    <div className="auth-container">
       <img src={require('./images/logo_final.png')} />
-      <div className="auth-container">
-        <h2>WHY DONT U WORK??!! </h2>
+      <h2>SNKR HEDZ </h2>
+      <hr />
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        props.handleLogin();
+      }} >
+        <p>Username:</p>
+        <input name="username" type="text" value={props.formData.username} placeholder="Enter Username" onChange={props.handleChange} />
+        <p>Password:</p>
+        <input name="password" type="password" value={props.formData.password} placeholder="Enter Password" onChange={props.handleChange} />
         <hr />
-        <form onSubmit={(e) => {
-          e.preventDefault();
-          props.handleLogin();
-        }} >
-          <p>Username:</p>
-          <input name="username" type="text" value={props.formData.username} placeholder="Enter Username" onChange={props.handleChange} />
-          <p>Password:</p>
-          <input name="password" type="password" value={props.formData.password} placeholder="Enter Password" onChange={props.handleChange} />
-          <hr />
-          <div className="log-reg-button">
-            <button>Login</button>
-            &nbsp;
+        <div className="log-reg-button">
+          <button>Login</button>
+          &nbsp;
           <button><Link to="/register">Register</Link></button>
-          </div>
-        </form>
-      </div>
-    </>
+        </div>
+      </form>
+    </div>
   );
 }
 
