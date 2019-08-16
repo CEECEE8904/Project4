@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom'
 import { Link, Route } from 'react-router-dom';
-import Header from './Header';
 import Collect from './Collect';
 import Add from './Add';
 
@@ -36,7 +35,7 @@ class Navbar extends React.Component {
       <>
         <nav>
           <div class="navbar">
-            <a href="#" class="logo">SNKR HEDZ</a>
+            <a href="" class="logo">SNKR HEDZ</a>
             <ul class="nav">
               <li><Link to="/home">Home</Link></li>
               <li><Link to="/collect">My Collection</Link></li>

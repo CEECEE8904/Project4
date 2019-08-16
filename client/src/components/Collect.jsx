@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import axios from 'axios';
 
+
 class Collect extends React.Component {
   constructor() {
     super();
@@ -25,14 +26,19 @@ class Collect extends React.Component {
         {
           this.state.collects.map(collect => (
             <div key={collect.id}>
-              <ul>
-                <ul>{collect.name}</ul>
-                <ul>{collect.brand}</ul>
-                <ul>{collect.description}</ul>
-                <ul>{collect.review}</ul>
-              </ul>
-
-              <h3><img src={collect.imgurl} /></h3>
+              <div class="row">
+                <div class="column1">
+                  <h3><img src={collect.imgurl} /></h3>
+                </div>
+                <div class="column2">
+                  <ul>
+                    <ul>{collect.name}</ul>
+                    <ul>{collect.brand}</ul>
+                    <ul>{collect.description}</ul>
+                    <ul>{collect.review}</ul>
+                  </ul>
+                </div>
+              </div>
             </div>
           ))
         }
