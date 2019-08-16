@@ -21,7 +21,7 @@ class Collect extends React.Component {
   render() {
     console.log(this.state.collects);
     return (
-      <div className="CollectsView">
+      <div className="collects-view">
         {
           this.state.collects.map(collect => (
             <div key={collect.id}>

@@ -34,7 +34,6 @@ class Navbar extends React.Component {
   render() {
     return (
       <>
-        <Header />
         <nav>
           <div class="navbar">
             <a href="#" class="logo">SNKR HEDZ</a>

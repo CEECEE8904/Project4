@@ -24,17 +24,23 @@ class SneakersView extends React.Component {
     console.log(this.state.sneakers);
     return (
       <div className="SneakersView">
+
         {
           this.state.sneakers.map(sneaker => (
             <div key={sneaker.id}>
-              <ul>
-                <ul>{sneaker.name}</ul>
-                <ul>{sneaker.brand}</ul>
-                <ul>{sneaker.description}</ul>
-                <ul>{sneaker.review}</ul>
-              </ul>
-
-              <h3><img src={sneaker.imgurl} /></h3>
+              <div class="row">
+                <div class="column1">
+                  <h3><img src={sneaker.imgurl} /></h3>
+                </div>
+                <div class="column2">
+                  <ul>
+                    <ul>{sneaker.name}</ul>
+                    <ul>{sneaker.brand}</ul>
+                    <ul>{sneaker.description}</ul>
+                    <ul>{sneaker.review}</ul>
+                  </ul>
+                </div>
+              </div>
             </div>
           ))
         }
