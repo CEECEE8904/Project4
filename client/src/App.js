@@ -108,7 +108,7 @@ class App extends React.Component {
               handleRegister={this.handleRegister}
               handleChange={this.authHandleChange}
               formData={this.state.authFormData} />)} />
-          <div>
+          <div className="toggle-btn">
             {this.state.currentUser
               ?
               <>

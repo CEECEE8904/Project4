@@ -5,6 +5,9 @@
 html, body {
   height: 100%;
   margin: 0;
+/* background:url('https://media.giphy.com/media/sfhIJ37lxaFFe/giphy.gif') center center fixed;
+background-position: center;
+background-size: cover; */
 }
 /* LOGIN / REGISTER PAGE */
 
@@ -23,13 +26,21 @@ background-size: cover; */
 }
 
 .auth-container button{
-  background-color: grey;
+  background-color:rgb(122, 120, 120);
   cursor: pointer;
   border-radius: 4px;
+width: 20vh;
+height:4vh;
+z-index: auto;
+}
+
+.auth-container button text{
+  color:white;
 }
 
 .auth-container button:hover{
 opacity: 0.8;
+background-color: red;
 }
 
 .auth-container button:visited{
@@ -59,6 +70,12 @@ opacity: 0.8;
   text-shadow: 2px 2px 4px grey;
 }
 
+.toggle-btn button{
+
+  right: 600px;
+  background-color: grey;
+
+}
 
 /* /////////////////////// */
 
