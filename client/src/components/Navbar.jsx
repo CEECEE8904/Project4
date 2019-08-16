@@ -35,7 +35,7 @@ class Navbar extends React.Component {
       <>
         <nav>
           <div class="navbar">
-            <a href="" class="logo">SNKR HEDZ</a>
+            <a href="/home" class="logo">SNKR HEDZ</a>
             <ul class="nav">
               <li><Link to="/home">Home</Link></li>
               <li><Link to="/collect">My Collection</Link></li>

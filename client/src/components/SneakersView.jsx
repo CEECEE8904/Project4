@@ -23,7 +23,7 @@ class SneakersView extends React.Component {
   render() {
     console.log(this.state.sneakers);
     return (
-      <div className="SneakersView">
+      <div className="sneakers-view">
 
         {
           this.state.sneakers.map(sneaker => (
