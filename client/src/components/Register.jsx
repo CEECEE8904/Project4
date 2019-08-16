@@ -7,7 +7,7 @@ const Register = (props) => {
 
     <div className="auth-container">
       <img src={require('./images/logo_final.png')} />
-      <h2>WORK YOU FKER!!!</h2>
+      <h2>DOES THIS WORK??!!!</h2>
       <hr />
       <form onSubmit={props.handleRegister} >
         <p>Username:</p>
