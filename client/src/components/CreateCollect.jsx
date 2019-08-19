@@ -2,9 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 
+
 function CreateCollect(props) {
   return (
-
     <div className="add-form" >
       <h1>Add to collection</h1>
       <form onSubmit={props.newCollect}>
@@ -57,4 +57,5 @@ function CreateCollect(props) {
     </div>
   )
 }
+
 export default withRouter(CreateCollect);
