@@ -198,15 +198,40 @@ a:hover{
 }
 
 .column1 img{
-  width:35%;
+  width:400px;
   align-content: center;
+  background-color: yelow;
+  float: left;
+  margin-left: 300px;
+  max-width: 200%;
+  padding-top: 100px;
 }
-
+.colum2{
+  border-style: solid;
+  border-width: small;
+}
+.column2 h4{
+font-size: 32px;
+text-align: center;
+border-style: solid;
+border-width: 2px;
+}
 .column2 ul{
   flex:1;
   width:50%;
-  align-content: center;
+  align-content: right;
+  text-align: left;
+  /* background-color: red; */
+  text-align: justify;
+  float: right;
+  margin-right: 300px;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 18px;
+  padding-left: 60px;
+
 } 
+
 
 
 
