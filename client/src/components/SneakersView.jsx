@@ -35,7 +35,7 @@ class SneakersView extends React.Component {
                 <div class="column2">
                   <ul>
                     <h4>{sneaker.name}</h4>
-                    <ul>{sneaker.brand}</ul>
+                    &nbsp; <ul>{sneaker.brand}</ul>
                     <ul>{sneaker.description}</ul>
                     <ul>{sneaker.review}</ul>
                   </ul>

@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom'
 import { Link, Route } from 'react-router-dom';
 import Collect from './Collect';
-import Add from './Add';
+import CreateCollect from './CreateCollect';
 
 
 
@@ -44,7 +44,7 @@ class Navbar extends React.Component {
             <button onClick={this.handleLogout}>Logout</button>
             <main>
               <Route path="/collect" render={() => <Collect />} />
-              <Route path="/add" render={() => <Add />} />
+              <Route path="/add" render={() => <CreateCollect />} />
               {/* <Route path="/home" render={() => <Home />} /> */}
             </main>
           </div>

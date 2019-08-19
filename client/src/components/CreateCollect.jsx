@@ -27,7 +27,7 @@ function CreateCollect(props) {
         <input
           type="text"
           name="description"
-          value={props.collectForm.descriptio}
+          value={props.collectForm.description}
           onChange={this.handleFormChange} />
         {/* REVIEW */}
         <p>Review</p>
