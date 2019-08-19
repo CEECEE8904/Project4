@@ -2,8 +2,20 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 
+handleFormChange = (e) => {
+  const { name, value } = e.target;
+  this.setState(prevState => ({
+    collectForm: {
+      ...prevState.collectForm,
+      [name]: value
+    }
+  }))
+}
+
+
 
 function CreateCollect(props) {
+  debugger;
   return (
     <div className="add-form" >
       <h1>Add to collection</h1>
@@ -14,42 +26,42 @@ function CreateCollect(props) {
           type="text"
           name="name"
           value={props.collectForm.name}
-          onChange={this.handleFormChange} />
+          onChange={props.handleFormChange} />
         {/* SNEAKER BRAND */}
         <p>Brand:</p>
         <input
           type="text"
           name="brand"
           value={props.collectForm.brand}
-          onChange={this.handleFormChange} />
+          onChange={props.handleFormChange} />
         {/* DESCRIPTION */}
         <p>Description:</p>
         <input
           type="text"
           name="description"
           value={props.collectForm.description}
-          onChange={this.handleFormChange} />
+          onChange={props.handleFormChange} />
         {/* REVIEW */}
         <p>Review</p>
         <input
           type="text"
           name="review"
           value={props.collectForm.review}
-          onChange={this.handleFormChange} />
+          onChange={props.handleFormChange} />
         {/* IMG URL */}
         <p>Image URL</p>
         <input
           type="text"
           name="imgurl"
           value={props.collectForm.imgurl}
-          onChange={this.handleFormChange} />
+          onChange={props.handleFormChange} />
         {/* PRICE */}
         <p>Price</p>
         <input
           type="text"
           name="price"
           value={props.collectForm.price}
-          onChange={this.handleFormChange} />
+          onChange={props.handleFormChange} />
         <br></br>
         <button>Submit</button>
       </form>

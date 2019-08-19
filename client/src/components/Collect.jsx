@@ -26,11 +26,11 @@ class Collect extends React.Component {
         {
           this.state.collects.map(collect => (
             <div key={collect.id}>
-              <div class="row">
-                <div class="column1">
+              <div className="row">
+                <div className="column1">
                   <h3><img src={collect.imgurl} /></h3>
                 </div>
-                <div class="column2">
+                <div className="column2">
                   <ul>
                     <ul>{collect.name}</ul>
                     <ul>{collect.brand}</ul>

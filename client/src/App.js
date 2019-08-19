@@ -160,7 +160,7 @@ class App extends React.Component {
     else {
       display =
         <>
-          <Navbar />
+          <Navbar collectForm={this.state.collectForm} handleFormChange={this.handleFormChange} />
         </>
     }
     return (

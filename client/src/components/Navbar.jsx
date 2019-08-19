@@ -34,9 +34,9 @@ class Navbar extends React.Component {
     return (
       <>
         <nav>
-          <div class="navbar">
-            <a href="/home" class="logo">SNKR HEDZ</a>
-            <ul class="nav">
+          <div className="navbar">
+            <a href="/home" className="logo">SNKR HEDZ</a>
+            <ul className="nav">
               <li><Link to="/home">Home</Link></li>
               <li><Link to="/collect">My Collection</Link></li>
               <li><Link to="/add">Add</Link></li>
@@ -44,7 +44,7 @@ class Navbar extends React.Component {
             <button onClick={this.handleLogout}>Logout</button>
             <main>
               <Route path="/collect" render={() => <Collect />} />
-              <Route path="/add" render={() => <CreateCollect />} />
+              <Route path="/add" render={() => <CreateCollect collectForm={this.props.collectForm} handleFormChange={this.props.handleFormChange} />} />
               {/* <Route path="/home" render={() => <Home />} /> */}
             </main>
           </div>

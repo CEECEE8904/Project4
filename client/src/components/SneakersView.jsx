@@ -28,11 +28,11 @@ class SneakersView extends React.Component {
         {
           this.state.sneakers.map(sneaker => (
             <div key={sneaker.id}>
-              <div class="row">
-                <div class="column1">
+              <div className="row">
+                <div className="column1">
                   <h3><img src={sneaker.imgurl} /></h3>
                 </div>
-                <div class="column2">
+                <div className="column2">
                   <ul>
                     <h4>{sneaker.name}</h4>
                     &nbsp; <ul>{sneaker.brand}</ul>
