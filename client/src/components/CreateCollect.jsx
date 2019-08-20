@@ -2,20 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 
-handleFormChange = (e) => {
-  const { name, value } = e.target;
-  this.setState(prevState => ({
-    collectForm: {
-      ...prevState.collectForm,
-      [name]: value
-    }
-  }))
-}
-
 
 
 function CreateCollect(props) {
-  debugger;
   return (
     <div className="add-form" >
       <h1>Add to collection</h1>
@@ -65,7 +54,6 @@ function CreateCollect(props) {
         <br></br>
         <button>Submit</button>
       </form>
-
     </div>
   )
 }

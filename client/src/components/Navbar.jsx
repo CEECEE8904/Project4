@@ -44,7 +44,10 @@ class Navbar extends React.Component {
             <button onClick={this.handleLogout}>Logout</button>
             <main>
               <Route path="/collect" render={() => <Collect />} />
-              <Route path="/add" render={() => <CreateCollect collectForm={this.props.collectForm} handleFormChange={this.props.handleFormChange} />} />
+              <Route path="/add" render={() => <CreateCollect collectForm={this.props.collectForm}
+                handleFormChange={this.props.handleFormChange2}
+                // handleFormChange={this.props.handleChange}
+                newCollect={this.newCollect} />} />
               {/* <Route path="/home" render={() => <Home />} /> */}
             </main>
           </div>

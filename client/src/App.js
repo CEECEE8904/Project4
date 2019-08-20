@@ -60,6 +60,8 @@ class App extends React.Component {
     })
   }
 
+
+  /////ADD NEW SNEAKER TO COLLECTION
   newCollect = async (e) => {
     e.preventDefault();
     const collect = await createCollect(this.state.collectForm);
@@ -77,8 +79,38 @@ class App extends React.Component {
     this.props.history.push('/collect');
   }
 
+  //////EDIT SNEAKER IN COLLECTION
+  editCollect = async () => {
+    const { collectForm } = this.state
+    await updateCollect(collectForm.id, collectForm);
+    this.setState(prevState => (
+      {
+        collects: prevState.collect.map(collect => collect.id === collectForm.id ? collectForm : collect),
+      }
+    ))
+  }
+
+  //////DELETE FROM COLLECTION
+  deleteCollect = async (id) => {
+    await destroyCollect(id);
+    this.setState(prevState => ({
+      collects: prevState.collects.filter(collect => collect.id !== id)
+    }))
+  }
+
 
   handleFormChange = (e) => {
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      collectForm: {
+        ...prevState.collectForm,
+        [name]: value
+      }
+    }))
+  }
+
+
+  handleFormChange2 = (e) => {
     const { name, value } = e.target;
     this.setState(prevState => ({
       authFormData: {
@@ -160,7 +192,11 @@ class App extends React.Component {
     else {
       display =
         <>
-          <Navbar collectForm={this.state.collectForm} handleFormChange={this.handleFormChange} />
+          <Navbar
+            collectForm={this.state.collectForm}
+            handleFormChange2={this.handleFormChange}
+            handleFormChange={this.props.handleFormChange}
+            newCollect={this.props.newCollect} />
         </>
     }
     return (
