@@ -21,8 +21,8 @@ function Collect(props) {
                 </ul>
               </div>
             </div>
-            <button onClick={() => { props.deleteCollect(collect.id) }}>delete</button>
-            <button onClick={() => { props.setFormData(collect) }}>Update</button>
+            <button onClick={() => { props.deleteCollect(collect.id) }}>DELETE</button>
+            <button onClick={() => { props.setFormData(collect) }}>EDIT</button>
           </div>
         ))
       }

@@ -248,7 +248,7 @@ class App extends React.Component {
 
               <Route path="/add" render={() => <CreateCollect
                 collectForm={this.state.collectForm}
-                handleFormChange={this.handleFormChange2}
+                handleFormChange={this.handleFormChange}
                 newCollect={this.newCollect}
               />} />
 
