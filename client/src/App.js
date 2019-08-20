@@ -13,7 +13,9 @@ import {
   registerUser,
   readAllSneakers,
   verifyUser,
-  createCollect
+  createCollect,
+  updateCollect,
+  destroyCollect
 
 } from './services/api-helper'
 
@@ -196,7 +198,7 @@ class App extends React.Component {
             collectForm={this.state.collectForm}
             handleFormChange2={this.handleFormChange}
             handleFormChange={this.props.handleFormChange}
-            newCollect={this.props.newCollect} />
+            newCollect={this.newCollect} />
         </>
     }
     return (

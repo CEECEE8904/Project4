@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { Link, Route } from 'react-router-dom';
 import Collect from './Collect';
 import CreateCollect from './CreateCollect';
+import EditCollect from './EditCollect';
 
 
 
@@ -40,14 +41,21 @@ class Navbar extends React.Component {
               <li><Link to="/home">Home</Link></li>
               <li><Link to="/collect">My Collection</Link></li>
               <li><Link to="/add">Add</Link></li>
+              <li><Link to="/edit">Edit</Link></li>
             </ul>
             <button onClick={this.handleLogout}>Logout</button>
             <main>
               <Route path="/collect" render={() => <Collect />} />
-              <Route path="/add" render={() => <CreateCollect collectForm={this.props.collectForm}
+              <Route path="/add" render={() => <CreateCollect
+                collectForm={this.props.collectForm}
                 handleFormChange={this.props.handleFormChange2}
-                // handleFormChange={this.props.handleChange}
-                newCollect={this.newCollect} />} />
+                // handleFormChange={this.props.authHandleChange}
+                newCollect={this.props.newCollect} />} />
+
+
+
+
+              <Route path="/edit" render={() => <EditCollect />} />
               {/* <Route path="/home" render={() => <Home />} /> */}
             </main>
           </div>
