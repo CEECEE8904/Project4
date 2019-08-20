@@ -15,14 +15,15 @@ function Collect(props) {
                 <ul>
                   <h4>{collect.name}</h4>
                   &nbsp;
-                  <ul>{collect.brand}</ul>
-                  <ul>{collect.description}</ul>
-                  <ul>{collect.review}</ul>
+                  <ul>Brand:       {collect.brand}</ul>
+                  <ul>Description:{collect.description}</ul>
+                  <ul>Review: {collect.review}</ul>
+                  <ul>Price: ${collect.price}</ul>
                 </ul>
               </div>
             </div>
-            <button onClick={() => { props.deleteCollect(collect.id) }}>DELETE</button>
             <button onClick={() => { props.setFormData(collect) }}>EDIT</button>
+            <button onClick={() => { props.deleteCollect(collect.id) }}>DELETE</button>
           </div>
         ))
       }

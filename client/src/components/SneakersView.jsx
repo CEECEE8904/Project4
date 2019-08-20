@@ -38,7 +38,6 @@ class SneakersView extends React.Component {
                     &nbsp; <ul>{sneaker.brand}</ul>
                     <ul>{sneaker.description}</ul>
                     <ul>{sneaker.review}</ul>
-                    <button>Add+</button>
                   </ul>
                 </div>
               </div>

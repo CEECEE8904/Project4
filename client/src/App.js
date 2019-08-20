@@ -237,6 +237,7 @@ class App extends React.Component {
                 render={() => (
                   <Home
                     sneakers={this.state.sneakers}
+
                   />)} />
               <Route path="/collect" render={() => (
                 <Collect
