@@ -10,17 +10,24 @@ class CollectsController < ApplicationController
   end
 
   def create
-    @collect = Collect.new(collect_params)
-    if @collect.save
-      render json: @collect, status: :created
-    else
-      render json:{ errors: @collect.errors }, status: :unprocessable_entity
-    end
+    # if params[:sneaker_id]
+    #   @sneaker = Sneaker.find(params[:sneaker_id])
+
+    # else
+      @collect = Collect.new(collect_params)
+      if @collect.save
+        render json: @collect, status: :created
+      else
+        render json:{ errors: @collect.errors }, status: :unprocessable_entity
+      end
+    # end
   end
 
   def update
     @collect = Collect.find(params[:id])
     if @collect.update(collect_params)
+      render json: @collect
+    else
       render json: { errors: @collect.errors }, status: :unprocessable_entity
     end
   end
@@ -34,6 +41,6 @@ class CollectsController < ApplicationController
   private
 
   def collect_params
-    params.require(:Collect).permit(:name, sneakers:id)
+    params.require(:collect).permit(:name, :brand, :description, :review, :imgurl, :price, :sneakers)
   end
 end

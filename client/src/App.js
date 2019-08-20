@@ -1,12 +1,13 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import { withRouter } from 'react-router';
-import decode from 'jwt-decode';
 import Login from './components/Login'
 import Register from './components/Register'
 import Home from './components/Home'
 import Navbar from './components/Navbar';
-
+import axios from 'axios';
+import { Route, withRouter } from 'react-router-dom';
+import Collect from './components/Collect';
+import CreateCollect from './components/CreateCollect';
+import EditCollect from './components/EditCollect';
 
 import {
   loginUser,
@@ -15,8 +16,8 @@ import {
   verifyUser,
   createCollect,
   updateCollect,
-  destroyCollect
-
+  destroyCollect,
+  readAllCollects
 } from './services/api-helper'
 
 import './App.css';
@@ -53,6 +54,11 @@ class App extends React.Component {
         currentUser: user
       })
     }
+    const res = await axios.get('http://localhost:3000/sneakers/1/collects')
+    const collects = res.data
+    this.setState({
+      collects: collects
+    })
   }
 
   getSneakers = async () => {
@@ -82,19 +88,37 @@ class App extends React.Component {
   }
 
   //////EDIT SNEAKER IN COLLECTION
-  editCollect = async () => {
+  editCollect = async (e) => {
+    e.preventDefault()
     const { collectForm } = this.state
     await updateCollect(collectForm.id, collectForm);
     this.setState(prevState => (
       {
-        collects: prevState.collect.map(collect => collect.id === collectForm.id ? collectForm : collect),
+        collects: prevState.collects.map(collect => collect.id === collectForm.id ? collectForm : collect),
+        collectForm: {
+          name: "",
+          brand: "",
+          description: "",
+          review: "",
+          imgurl: "",
+          price: ""
+        }
       }
     ))
+    this.props.history.push('/collect')
+  }
+
+  setFormData = (collect) => {
+    this.setState({
+      collectForm: collect
+    })
+    this.props.history.push('/edit')
   }
 
   //////DELETE FROM COLLECTION
   deleteCollect = async (id) => {
     await destroyCollect(id);
+    debugger;
     this.setState(prevState => ({
       collects: prevState.collects.filter(collect => collect.id !== id)
     }))
@@ -122,6 +146,13 @@ class App extends React.Component {
     }));
   }
 
+  mountEditForm = async (id) => {
+    const collects = await readAllCollects();
+    const collect = collects.find(el => el.id === parseInt(id));
+    this.setState({
+      collectForm: collect
+    });
+  }
 
   // -------------- AUTH ------------------
 
@@ -164,55 +195,72 @@ class App extends React.Component {
 
 
   render() {
-    let display
-    if (!this.state.currentUser) {
-      display =
-        <>
-          <Route exact path="/login" render={() => (
-            <Login
-              handleLogin={this.handleLogin}
-              handleChange={this.authHandleChange}
-              formData={this.state.authFormData} />)} />
-          <Route exact path="/register" render={() => (
-            <Register
-              handleRegister={this.handleRegister}
-              handleChange={this.authHandleChange}
-              formData={this.state.authFormData} />)} />
-          <div className="toggle-btn">
-            {this.state.currentUser
-              ?
-              <>
-                <p>{this.state.currentUser.username}</p>
-                <button onClick={this.handleLogout}>Logout</button>
-              </>
-              :
-              <button onClick={this.handleLoginButton}>Login/Register</button>}
-
-          </div>
-        </>
-    }
-    else {
-      display =
-        <>
-          <Navbar
-            collectForm={this.state.collectForm}
-            handleFormChange2={this.handleFormChange}
-            handleFormChange={this.props.handleFormChange}
-            newCollect={this.newCollect} />
-        </>
-    }
     return (
       <div className="App">
         <header>
-          {display}
+          {
+            this.state.currentUser
+              ?
+              <Navbar
+                handleLogout={this.handleLogout}
+              />
+              :
+              <>
+                <Route exact path="/login" render={() => (
+                  <Login
+                    handleLogin={this.handleLogin}
+                    handleChange={this.authHandleChange}
+                    formData={this.state.authFormData} />)} />
+                <Route exact path="/register" render={() => (
+                  <Register
+                    handleRegister={this.handleRegister}
+                    handleChange={this.authHandleChange}
+                    formData={this.state.authFormData} />)} />
+                <div className="toggle-btn">
+                  {this.state.currentUser
+                    ?
+                    <>
+                      <p>{this.state.currentUser.username}</p>
+                      <button onClick={this.handleLogout}>Logout</button>
+                    </>
+                    :
+                    <button onClick={this.handleLoginButton}>Login/Register</button>}
+
+                </div>
+              </>
+          }
         </header>
         <main>
           <div className="homenav">
-            <Route exact path="/home"
-              render={() => (
-                <Home
-                  sneakers={this.state.sneakers}
-                />)} />
+            <main>
+              <Route exact path="/home"
+                render={() => (
+                  <Home
+                    sneakers={this.state.sneakers}
+                  />)} />
+              <Route path="/collect" render={() => (
+                <Collect
+                  deleteCollect={this.deleteCollect}
+                  collects={this.state.collects}
+                  setFormData={this.setFormData}
+                />
+              )} />
+
+              <Route path="/add" render={() => <CreateCollect
+                collectForm={this.state.collectForm}
+                handleFormChange={this.handleFormChange2}
+                newCollect={this.newCollect}
+              />} />
+
+              <Route path="/edit" render={() => (
+                <EditCollect
+                  collectForm={this.state.collectForm}
+                  handleFormChange={this.handleFormChange}
+                  editCollect={this.editCollect}
+                />
+              )} />
+              {/* <Route path="/home" render={() => <Home />} /> */}
+            </main>
           </div>
         </main>
       </div>
