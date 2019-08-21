@@ -344,7 +344,7 @@ border-width: 2px;
 /* //////////FOOTER///////// */
 
 footer {
-  color: #666;
+  color: white;
   background: #222;
   bottom: 0px;
   padding: 5px 0 1px 0;
@@ -355,7 +355,8 @@ footer {
   position:fixed;
 }
 footer a {
-  color: #999;
+  /* color: #999; */
+  color:white;
 }
 footer a:hover {
   color: #efefef;
