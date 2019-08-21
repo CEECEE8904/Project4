@@ -39,6 +39,14 @@ class SneakersView extends React.Component {
                     <ul>{sneaker.description}</ul>
                     <ul>{sneaker.review}</ul>
                   </ul>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
                 </div>
               </div>
             </div>

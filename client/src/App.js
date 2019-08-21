@@ -265,12 +265,9 @@ class App extends React.Component {
           </div>
         </main>
         <footer>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <h8>FOOTER GOES HERE!</h8>
+          <div class="container">
+            <p>Here Comes The Footer 2014 <a href=""> Copyright</a> and stuff</p>
+          </div>
         </footer>
       </div>
     );

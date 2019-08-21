@@ -25,11 +25,21 @@ function Collect(props) {
             <div class="buttons">
               <button onClick={() => { props.setFormData(collect) }}>EDIT</button>
               <button onClick={() => { props.deleteCollect(collect.id) }}>DELETE</button>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
             </div>
           </div>
+
         ))
       }
     </div>
+
   )
 }
 
