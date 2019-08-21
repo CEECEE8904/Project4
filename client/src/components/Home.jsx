@@ -7,6 +7,14 @@ export default function Home() {
     <div>
       <Header />
       <SneakersView />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   )
 }
