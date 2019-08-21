@@ -202,6 +202,12 @@ a:hover{
   margin-left: 300px;
   max-width: 200%;
   padding-top: 100px;
+  transition: transform .1s;
+
+}
+
+.column1:hover img{
+  transform: scale(1.4); 
 }
 .colum2{
   border-style: solid;
