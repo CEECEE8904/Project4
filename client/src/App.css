@@ -329,12 +329,6 @@ input{
 
 /* ////////BUTTONS///////// */
 
-/* .buttons button{
-  background-color: grey;
-  color:white;
-  width: 25vh;
-  margin-left: 700px;
-} */
 
 .buttons button{
   -moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
