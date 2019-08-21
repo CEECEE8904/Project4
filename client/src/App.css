@@ -121,23 +121,6 @@ html {
 
 
 /* NAV BAR */
-/* .nav_links li{
-  list-style: none;
-  display:inline-block;
-  padding: 0px 85px;
-  text-align: center;
-  text-decoration: none;
-}
-
-li:visited{
-  text-decoration: none;
-}
-
-a
-{
-   text-decoration:none;
-} */
-
 
 .navbar{
   padding: fixed;
@@ -157,6 +140,8 @@ a
   justify-content: right;
   list-style: none;
   margin-right: 15%;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .nav a:hover{
@@ -168,7 +153,7 @@ a
   margin-left: -25%;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 35px;
   color: red;
 }
@@ -284,6 +269,41 @@ border-width: 2px;
 /* ADD///////////// */
 
 
+.add-form h1{
+  color: red;
+  font-size: 2.5em;
+}
+
+.add-form p{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input{
+  height:24px;
+}
+
+
+
+
+
+
+/* //EDIT FORM (EDIT PAGE////) */
+
+
+.edit-form h1{
+  color:red;
+  font-size: 2.5em;
+}
+
+.edit-form p{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input{
+  height:24px;
+}
 
 
 

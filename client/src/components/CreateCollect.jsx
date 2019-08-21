@@ -31,7 +31,7 @@ function CreateCollect(props) {
           value={props.collectForm.description}
           onChange={props.handleFormChange} />
         {/* REVIEW */}
-        <p>Review</p>
+        <p>Review:</p>
         <input
           type="text"
           name="review"
