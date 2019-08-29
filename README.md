@@ -125,10 +125,22 @@ Once form is completed user submits and it gets added to their collection.
 
 Component     | Priority      | Estimated Time  |  Actual Time  |
 ------------- | ------------- |---------------  |-------------  |
-Sign In Form  | High          |  3 1/2 Hours    | TBD           |
-Sign Up Form  | High          |  TBD            | TBD           |
-Log Out       | High          |  TBD            | TBD           |
-Register Form | High          |  TBD            | TBD           |<br /><br />
+Sign In Form  | High          |  3 1/2 Hours    | 2 Hours       |
+Sign Up Form  | High          |  2 Hours        | 2 Hours       |
+Log In/ Logout| High          |  45 Mins        | 1 Hour        |
+Register Form | High          |  45 Mins        | 45 Mins       |
+Navbar        | Mid           |  1 Hour         | 1 Hour 45 mins|
+Header        | Low           |  30 Mins        | 25 Mins       |
+Home          | Mid           |  30 Mins        | 30 Mins       |
+Collect Page  | Mid           |  3 Hours        | 3 Hours       |
+SneakersView  | Mid           |  3 Hours        | 3 Hours       |
+Create Collect| High          |  2 Hours        | 1 Hour 55 mins|
+Edit Collect  | High          |  2 Hours        | 1 Hour        |
+App.js        | High          |  3 Hours        | 7 Hours       |
+Authentication| High          |  8 Hours        | 14 Hours      |
+DB Schema     | High          |  3 Hours        | 2 Hours       |
+Database      | High          |  2 Hours        | 1 Hour 40 mins|
+<br /><br />
 
 
     
